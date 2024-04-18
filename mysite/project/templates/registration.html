@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Form</title>
+    <style>
+        /* Add your CSS styles here */
+        /* This is just a basic example */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>PROVIDE ACCURATE INFORMATION HERE</h2>
+    <form id="myForm" action="/submit-form-url" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required>
+
+        <label for="id_number">ID Number:</label>
+        <input type="text" id="id_number" name="id_number" required>
+
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number" required>
+
+        <label for="current_address">Current Address:</label>
+        <textarea id="current_address" name="current_address"></textarea>
+
+        <label for="id_upload">ID Upload:</label>
+        <input type="file" id="id_upload" name="id_upload" accept=".pdf,.jpg,.png" required>
+
+        <label for="certificate_upload">Certificate Upload:</label>
+        <input type="file" id="certificate_upload" name="certificate_upload" accept=".pdf,.jpg,.png" required>
+
+        <label for="position_in_institute">Position in Institute:</label>
+        <input type="text" id="position_in_institute" name="position_in_institute" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -13,5 +13,7 @@ def account(request):
     return render(request,"account.html")
 
 
+def register(request):
+    return render(request,"registration.html")
 
 # Create your views here.
