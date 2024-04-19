@@ -5,8 +5,11 @@ from django.shortcuts import redirect, render
 #def index(request):
     #return HttpResponse("Hello, world. You're at the project index.")
 
-def home(request):
+def index(request):
     #return HttpResponse('welcome to this page')
+    return render(request,"index.html")
+
+def home(request):
     return render(request,"home.html")
 
 def account(request):

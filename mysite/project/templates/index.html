@@ -277,22 +277,22 @@ margin-bottom: 10px;
                         <p>GET ENGINEER</p>
                     </a>
                 </li>
-                <li>
-                    <li class="dropdown1">
-                        <a href="" data-toggle="dropdown">
-                                 <i class="pe-7s-note2"></i>
-                                 <p>ACCOUNT</p>
-                             </a>
-                             <ul class="dropdown-menu1">
-                                 <li><a href="#">Login</a></li>
-                                 <li><a href="{% url 'register' %}">Register now</a></li>
-                               </ul>
-                         </li>
+                <li class="dropdown1">
+               <a href="" data-toggle="dropdown">
+                        <i class="pe-7s-note2"></i>
+                        <p>ACCOUNT</p>
+                    </a>
+                    <ul class="dropdown-menu1">
+                        <li><a href="#">Login</a></li>
+                        <li><a href="{% url 'register' %}">Register now</a></li>
+                      </ul>
+                </li>
                 <li>
                     <a href="about.html">
                         <i class="pe-7s-news-paper"></i>
                         <p>ABOUT US</p>
                     </a>
+                    
                 </li>
                 <li>
                     <a href="contact.html">
@@ -320,41 +320,25 @@ margin-bottom: 10px;
 
 </div>
         <div class="content">
-            <img src="static/img/34.jpg" style="width: 100%; margin-top: -18px; position: relative;">
-            <h1 style="text-align: center;color: #150356; font-weight: bold;">MISSION</h1>
-            <p style="text-align: center; color: #000;font-weight: bold;">Welcome to our Platform, We help you to get Connected to a professional<br> engineer, feel free to Explore,Get ready to receive the best engineers.</p>
-            <table class="tbody">
-                    <h1 style="text-align:center;font-size:30px;color: #150356; font-weight:bold;">DIFFERENT CATEGORY OF ENGINEER</h1>
-                <tr>
-                    <td><img src="static/img/45.webp"></td>
-                    <td><img src="static/img/electricity.jpg"></td>
-                    <td><img src="static/img/conss.jpg"></td>
-                </tr>
-               <tr>
-                    <td><p><b>HIGH WAY ENGINEERING</b><br>is a professional engineering discipline branching from the civil 
-                        engineering subdiscipline of transportation engineering that involves the planning,design, 
-                        construction, operation,and maintenance of roads,highways,streets,bridges, 
-                        and tunnels to ensure safe and effective transportation of people and goods.</p><br><a href="">FIND MORE</a></td>
-                    <td><p style="margin-top: -60px;"><b>ELECTRICAL ENGINEERING</b><br>Is an engineering discipline concerned with 
-                        the study,design,and application of equipment,devices,and systems which 
-                        use electricity, electronics,and electromagnetism.</p><br><a href="">FIND MORE</a></td>
-                        <td><p><b>CONSTRUCTION ENGINEER</b><br> A civil engineer who oversees the design and construction of large building projects and works closely with architects and structural engineers to interpret building design plans and ensure that the project meets certain safety requirements. While they don't have direct involvement in the construction process, they're still responsible 
-                            for ensuring that the process adheres to the proper construction standards and specifications.</p><a href="">FIND MORE</a></td>
-                </tr>
-                <tr>
-                    <td><img src="static/img/water.webp"></td>
-                    <td><img src="static/img/arch.jpg"></td>
-                </tr>
-               <tr>
-                    <td><p><b>WATER ENGINEERS</b><br>Specializes in the planning,design,and management of water-related infrastructure and systems. 
-                        They are responsible for addressing various aspects of water management, including water supply, treatment,
-                         distribution, wastewater management,and stormwater control.</p><a href="">FIND MORE</a></td>
-                    <td><p><b>ARCHITECTURAL ENGINEERS</b><br> Apply practical and theoretical knowledge to the engineering design of buildings and building systems.
-                        The goal is to engineer high-performance buildings that are sustainable, resilient, economically viable, 
-                        that ensure the safety,health,comfort,and productivity of occupants.</p><a href="">FIND MORE</a></td>
-                </tr>
-            </table>
-            
+            <img src="static/img/picc.jpg" style="width: 100%; margin-top: -18px; position: relative;">
+            <div class="slides">
+                <ul>
+                    <li><img src="static/img/eng.jpg" alt="" style="width:600px;height:500px;"></li>
+                    <li><img src="static/img/2.webp" alt="" style="width:600px;height:500px;"></li>
+                    <li><img src="static/img/1.jpg" alt="" style="width:600px;height:500px;"></li>
+                    <li><img src="static/img/4.jpg" alt="" style="width:600px;height:500px;"></li>
+                    <li><img src="static/img/5.jpg" alt="" style="width:600px;height:500px;"></li>
+                </ul>
+                <a href="#" class="slide-next"></a> 
+                <a href="#" class="slide-prev"></a>
+                
+         
+            </div>
+            <div class="">
+            <ul>
+          <li> <img src="static/img/image.jpg" style="width: 100px; border-radius: 5px;"></li>
+          <li><p>Welcome</p></li>
+        </ul></div>
         </div>
 
 
@@ -393,8 +377,8 @@ margin-bottom: 10px;
                         <a href="https://www.youtube.com"><i class="icon ion-social-youtube"></i></a>
                         <a href="https://www.instagram.com"><i class="icon ion-social-instagram"></i></a><br><br><p style="color:#7EC8E3;font-size:15px;">Get Connected with the World</p></div>
                    </div><br>
-                    <p  class="" style="margin-left:400px; color: white;">
-                        &copy; <script>document.write(new Date().getFullYear())</script>Created by SAMBE Team</a>, Final Year Project
+                    <p  class="" style="margin-left:400px;color: white;">
+                        &copy; <script>document.write(new Date().getFullYear())</script> Created by SAMBE Team</a>, Final Year Project
                     </p>
                 
             </div>
@@ -442,6 +426,8 @@ margin-bottom: 10px;
 
     	});
 	</script>
+    <!--JAVASCRIPT OF SLIDER-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
     jQuery(document).ready(function($) {
         var interval;

@@ -1,0 +1,25 @@
+.tbody{
+    width: 300px;
+    margin-left: 50px;
+}
+.tbody img{
+    width: 300px;
+   
+}
+.tbody td{
+    padding: 13px;
+}
+.tbody a{
+    background-color: #150356;
+    font-size: 20px;
+    margin-left: 80px;
+    color: white;
+}
+.tbody tr td p{
+    text-align: center;
+    font-size: 15px;
+}
+
+.dropdown-menu1{
+    list-style-type: none;
+}
