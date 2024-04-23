@@ -320,6 +320,8 @@ margin-bottom: 10px;
 
 </div>
         <div class="content">
+            <h2 style="text-align: center;font-family: 'Times New Roman', Times, serif;">Today</h2>
+            <span id="datetime" style="font-size: 25px; margin-left: 400px; "></span><br><br>
             <img src="static/img/34.jpg" style="width: 100%; margin-top: -18px; position: relative;">
             <h1 style="text-align: center;color: #150356; font-weight: bold;">MISSION</h1>
             <p style="text-align: center; color: #000;font-weight: bold;">Welcome to our Platform, We help you to get Connected to a professional<br> engineer, feel free to Explore,Get ready to receive the best engineers.</p>
@@ -425,6 +427,22 @@ margin-bottom: 10px;
 
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 	<script src="static/js/demo.js"></script>
+    <script>
+        // create a function to update the date and time
+        function updateDateTime() {
+          // create a new `Date` object
+          const now = new Date();
+    
+          // get the current date and time as a string
+          const currentDateTime = now.toLocaleString();
+    
+          // update the `textContent` property of the `span` element with the `id` of `datetime`
+          document.querySelector('#datetime').textContent = currentDateTime;
+        }
+    
+        // call the `updateDateTime` function every second
+        setInterval(updateDateTime, 1000);
+      </script>
 
 	<script type="text/javascript">
     	$(document).ready(function(){

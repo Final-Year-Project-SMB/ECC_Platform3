@@ -159,7 +159,7 @@ body,
 }
 
 body {
-    background: #ffffff26;
+    background-image: url("static/img/sidebar-2.jpg");
     left: 0;
     right: 0;
     bottom: 0;
@@ -324,6 +324,7 @@ input:focus {
 .sidebar .nav li:hover > a {
     background-color: none;
     opacity: 100;
+    
 }
 
 .sidebar .nav li > a {
@@ -337,7 +338,7 @@ input:focus {
 .sidebar .nav li.active > a {
     color: #FFFFFF;
     opacity: 1;
-    background: rgba(255, 255, 255, 0.23);
+    background: none;
 }
 
 .sidebar .nav li.separator {
@@ -484,13 +485,16 @@ input:focus {
     position: relative;
     z-index: 2;
     float: right;
+    right: 0;
     width: calc(100% - 260px);
 }
 
 .main-panel > .content {
     padding: 20px 15px;
     min-height: calc(100% - 123px);
+   
 }
+
 
 .main-panel > .footer {
     border-top: 1px solid #e7e7e7;
@@ -1789,7 +1793,7 @@ fieldset[disabled] .btn-neutral.active {
 }
 
 .navbar-default .navbar-nav > li > a:not(.btn) {
-    color: #9A9A9A;
+    color: none;
 }
 
 .navbar-default .navbar-nav > .active > a,
@@ -3108,6 +3112,7 @@ fieldset[disabled] .btn-neutral.active {
     }
     body {
         position: fixed;
+        
        
     }
     .main-panel {

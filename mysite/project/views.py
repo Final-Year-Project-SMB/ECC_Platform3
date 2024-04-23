@@ -15,6 +15,9 @@ def home(request):
 def account(request):
     return render(request,"account.html")
 
+def contact(request):
+    return render(request,"contact.html")
+
 
 def register(request):
     return render(request,"registration.html")

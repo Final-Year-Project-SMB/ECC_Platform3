@@ -226,6 +226,9 @@ margin-bottom: 10px;
     <!-- Bootstrap core CSS     -->
     <link href="static/css/bootstrap.min.css" rel="stylesheet" />
 
+     <!-- Bootstrap core CSS     -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <!-- Animation library for notifications   -->
     <link href="static/css/animate.min.css" rel="stylesheet"/>
 
@@ -242,6 +245,7 @@ margin-bottom: 10px;
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="static/css/pe-icon-7-stroke.css" rel="stylesheet" />
+   
 
 </head>
 <body>
@@ -277,8 +281,8 @@ margin-bottom: 10px;
                         <p>GET ENGINEER</p>
                     </a>
                 </li>
-                <li class="dropdown1">
-               <a href="" data-toggle="dropdown">
+                <li class="dropdown-menu1">
+               <a type="button" href="" data-toggle="dropdown">
                         <i class="pe-7s-note2"></i>
                         <p>ACCOUNT</p>
                     </a>
@@ -295,7 +299,7 @@ margin-bottom: 10px;
                     
                 </li>
                 <li>
-                    <a href="contact.html">
+                    <a href="{% url 'contact' %}">
                         <i class="pe-7s-science"></i>
                         <p>CONTACT US</p>
                     </a>
@@ -320,25 +324,48 @@ margin-bottom: 10px;
 
 </div>
         <div class="content">
-            <img src="static/img/picc.jpg" style="width: 100%; margin-top: -18px; position: relative;">
-            <div class="slides">
-                <ul>
-                    <li><img src="static/img/eng.jpg" alt="" style="width:600px;height:500px;"></li>
-                    <li><img src="static/img/2.webp" alt="" style="width:600px;height:500px;"></li>
-                    <li><img src="static/img/1.jpg" alt="" style="width:600px;height:500px;"></li>
-                    <li><img src="static/img/4.jpg" alt="" style="width:600px;height:500px;"></li>
-                    <li><img src="static/img/5.jpg" alt="" style="width:600px;height:500px;"></li>
-                </ul>
-                <a href="#" class="slide-next"></a> 
-                <a href="#" class="slide-prev"></a>
-                
-         
-            </div>
-            <div class="">
-            <ul>
-          <li> <img src="static/img/image.jpg" style="width: 100px; border-radius: 5px;"></li>
-          <li><p>Welcome</p></li>
-        </ul></div>
+           <h2 style="text-align: center;font-family: 'Times New Roman', Times, serif;">Today</h2>
+            <span id="datetime" style="font-size: 25px; margin-left: 400px; "></span>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="static/img/1pic.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 style="color: black; font-size:40px;font-weight:weight;">Welcome To Our Platform</h5>
+                      <p style="font-size:20px; font-weight: bold;color: white;">Where you Can get connected with engineers according to the services you want</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="static/img/tre.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 style="color: black; font-size:40px;font-weight:weight;">Accessibility</h5>
+                      <p style="font-size:20px; font-weight: bold;color: white;">Meet the professional engineers fastly</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="static/img/trb.webp" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 style="color: black; font-size:40px;font-weight:weight;">Trust us</h5>
+                      <p style="font-size:20px; font-weight: bold; color: white;"> With the Best Delivarance of Services</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <br><br>
+              <h2><a style="text-decoration: none;margin-left: 400px;" href="{% url 'home' %}">GET STARTED</a></h2>
         </div>
 
 
@@ -388,6 +415,22 @@ margin-bottom: 10px;
 </div>
 
 </body>
+<script>
+    // create a function to update the date and time
+    function updateDateTime() {
+      // create a new `Date` object
+      const now = new Date();
+
+      // get the current date and time as a string
+      const currentDateTime = now.toLocaleString();
+
+      // update the `textContent` property of the `span` element with the `id` of `datetime`
+      document.querySelector('#datetime').textContent = currentDateTime;
+    }
+
+    // call the `updateDateTime` function every second
+    setInterval(updateDateTime, 1000);
+  </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
@@ -406,9 +449,12 @@ margin-bottom: 10px;
 
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
 	<script src="static/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+    
 
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 	<script src="static/js/demo.js"></script>
+    	<!-- SLIDER  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 	<script type="text/javascript">
     	$(document).ready(function(){
@@ -428,45 +474,5 @@ margin-bottom: 10px;
 	</script>
     <!--JAVASCRIPT OF SLIDER-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script>
-    jQuery(document).ready(function($) {
-        var interval;
-        
-        $('.slides').hover(function() {
-            if (interval) clearInterval(interval);
-            clearInterval(interval);
-            interval = null;
-        }, function() {
-            interval = setInterval(function() { slideRight(); }, 2000);	
-        });
-        var slideCount  = $('.slides ul li').length;
-        var slideWidth  = $('.slides ul li').width();
-        var slideHeight = $('.slides ul li').height();
-        var sliderWidth = slideCount * slideWidth;
-        
-        $('.slides').css({ width: slideWidth, height: slideHeight });
-        $('.slides ul').css({ width: sliderWidth, marginLeft: - slideWidth });
-        $('.slides ul li:last-child').prependTo('.slides ul');
-        
-        function slideLeft() {
-            $('.slides ul').animate({ left: + slideWidth }, 200, function() {
-                $('.slides ul li:last-child').prependTo('.slides ul');
-                $('.slides ul').css('left', '');
-            });
-        };
-        function slideRight() {
-            $('.slides ul').animate({ left: - slideWidth }, 200, function() {
-                $('.slides ul li:first-child').appendTo('.slides ul');
-                $('.slides ul').css('left', '');
-            });
-        };
-        $('a.slide-prev').click(function(e) {
-            e.preventDefault(); slideLeft();
-        });
-        $('a.slide-next').click(function(e) {
-            e.preventDefault(); slideRight();
-        });
-    });
-    </script>
 
 </html>
