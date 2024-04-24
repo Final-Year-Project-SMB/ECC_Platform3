@@ -15,11 +15,14 @@ def home(request):
 def account(request):
     return render(request,"account.html")
 
-def contact(request):
-    return render(request,"contact.html")
+def about(request):
+    return render(request,"about.html")
 
 
 def register(request):
     return render(request,"registration.html")
+
+def login(request):
+    return render(request,"login.html")
 
 # Create your views here.

@@ -268,7 +268,7 @@ margin-bottom: 10px;
                 <li class="active">
                     <a href="{% url 'home' %}">
                         <i class="pe-7s-graph"></i>
-                        <p>Homepage</p>
+                        <p>HOME</p>
                     </a>
                 </li>
                 <li>
@@ -284,20 +284,14 @@ margin-bottom: 10px;
                                  <p>ACCOUNT</p>
                              </a>
                              <ul class="dropdown-menu1">
-                                 <li><a href="#">Login</a></li>
+                                 <li><a href="{% url 'login' %}">Login</a></li>
                                  <li><a href="{% url 'register' %}">Register now</a></li>
                                </ul>
                          </li>
                 <li>
-                    <a href="about.html">
+                    <a href="{% url 'about' %}">
                         <i class="pe-7s-news-paper"></i>
                         <p>ABOUT US</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="contact.html">
-                        <i class="pe-7s-science"></i>
-                        <p>CONTACT US</p>
                     </a>
                 </li>
             </ul>
@@ -374,9 +368,9 @@ margin-bottom: 10px;
                     <div class="col-sm-4 col-md-3 item">
                         <h3>About</h3>
                         <ul>
-                            <li><a href="#">IER Company</a></li>
+                            <li><a href="https://www.engineersrwanda.rw/ier/about-us">IER Company</a></li>
                             <li><a href="#">Team</a></li>
-                            <li><a href="#">History</a></li>
+                            <li><a href="https://www.engineersrwanda.rw/ier/news">History</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-4 col-md-3 item">
