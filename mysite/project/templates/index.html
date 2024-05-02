@@ -242,12 +242,13 @@ margin-bottom: 10px;
 .indexstart{
   margin-left: 400px;
   background-color: #000;
-  padding: 12px 12px;
+  padding: 7px 7px;
   color: white;
+  font-size: 25px;
 }
 .indexstart:hover{
   background-color: black;
-  color: #42d0ed;;
+  color: green;
 }
     </style>
 
@@ -346,8 +347,8 @@ margin-bottom: 10px;
         <!--HEADER CONTENT-->
         <div class="header" id="myHeader">
           <div class="logo">
-            <img src="static/img/logoo.png" style="width: 40px;border-radius: 20px; position: fixed;"> 
-            <a href="#" class="simple-text">
+            <a href="{% url 'index' %}"><img src="static/img/logoo.png" style="width: 40px;border-radius: 20px; position: fixed;"></a>
+            <a href="{% url 'index' %}" class="simple-text">
                ECC PLATFORM
             </a>
           </div>
@@ -403,9 +404,34 @@ margin-bottom: 10px;
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
-              </div>
+              </div><br><br>
+<!-- COLLAPSE BUTTON-->
+<p style="text-align: center;">
+<a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Engineers</a>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">More INFO</button>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Our partnership</button>
+</p>
+<div class="row">
+<div class="col">
+<div class="collapse multi-collapse" id="multiCollapseExample1">
+<div class="card card-body">
+<p>Joined: <b style="color: red;">50</b> Engineers</p> &nbsp;&nbsp; <p>Clients: <b style="color: red;">30</b> Request services</p>
+</div>
+</div>
+</div>
+<div class="col">
+<div class="collapse multi-collapse" id="multiCollapseExample2">
+<div class="card card-body">
+  <h2>Visit:</h2><hr>
+<a href="https://www.engineersrwanda.rw/"><img src="static/img/ier.png"></a><br>
+<a href="https://ria.rw/"><img src="static/img/ria.png"></a>
+</div>
+</div>
+</div>
+</div>             
+<!-- COLLAPSE BUTTON-->
               <br><br>
-              <h2><a class="indexstart" href="{% url 'home' %}">GET STARTED</a></h2>
+              <h2><a class="indexstart" href="{% url 'home' %}"><i class="pe-7s-rocket"></i>&nbsp;&nbsp;GET STARTED</a></h2>
         </div>
 
 
@@ -500,23 +526,6 @@ margin-bottom: 10px;
 	<script src="static/js/demo.js"></script>
     	<!-- SLIDER  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-	<script type="text/javascript">
-    	$(document).ready(function(){
-
-        	demo.initChartist();
-
-        	$.notify({
-            	icon: 'pe-7s-gift',
-            	message: "Welcome to <b>ECC Platform</b> - A best Platform to found a professional engineer."
-
-            },{
-                type: 'info',
-                timer: 4000
-            });
-
-    	});
-	</script>
     <!--JAVASCRIPT OF SLIDER-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 

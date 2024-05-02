@@ -361,8 +361,8 @@ margin-bottom: 10px;
         <!--HEADER CONTENT-->
         <div class="header" id="myHeader">
           <div class="logo">
-            <img src="static/img/logoo.png" style="width: 40px;border-radius: 20px; position: fixed;"> 
-            <a href="#" class="simple-text">
+            <a href="{% url 'index' %}"><img src="static/img/logoo.png" style="width: 40px;border-radius: 20px; position: fixed;"></a>
+            <a href="{% url 'index' %}" class="simple-text">
                ECC PLATFORM
             </a>
           </div>
@@ -379,7 +379,7 @@ margin-bottom: 10px;
 </div>
         <div class="content">
             
-            <div class="aboutp"><h1 style="text-align: center;font-size:60px; top: 10%;">About -- ECC Platform</h1></div> <br> 
+            <div class="aboutp"><h1 style="text-align: center;font-size:60px; transform: translate(12px,55px);">About -- ECC Platform</h1></div> <br> 
             <h2 style="text-align: center;color: #050A30;font-weight: bold;">Who We Are</h2>
             <hr style="width:400px; color: #050A30;">  
             <p style="text-align: center;">We are a group of 3 Peaple, and we are students at university of Rwanda(NYARUGENGE Campus),After 
@@ -431,7 +431,23 @@ margin-bottom: 10px;
                   <td></td>
                 </tr>
                </table>
-        </div>
+<!-- COLLAPSE BUTTON-->
+<br><br><br>
+<p style="text-align: center;">
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Our partnership</button>
+  </p>
+  <div class="row">
+  </div>
+  <div class="col">
+  <div class="collapse multi-collapse" id="multiCollapseExample2">
+  <div class="card card-body">
+    <h2 style="color: #050A30; font-weight: bold;">Visit</h2><hr>
+  <a href="https://www.engineersrwanda.rw/"><img src="static/img/ier.png"></a><br>
+  <a href="https://ria.rw/"><img src="static/img/ria.png"></a>
+  </div>
+  </div>
+  </div>
+  </div>        
 
 
         <footer class="footer">
