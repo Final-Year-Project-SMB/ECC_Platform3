@@ -7,21 +7,6 @@
 	<link rel="icon" type="image/png" href="static/img/logoo.png">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <style>
-.slides, .slides ul, .slides li { position: relative; overflow: hidden; width: 600px; height: 500px; margin: 0; padding: 0; 
-}
-.slides { 
-    margin: 0 auto; 
-   margin-left: -12px;
-}
-.slides ul li { 
-    float: left; list-style: none; }
-a.slide-prev, a.slide-next { 
-	position: absolute; 
-    top: 10%; z-index: 999; display: block; width: 24px; height: 24px; margin-top: -12px; cursor: pointer; opacity: 0.3;
-	color: #fff; background: #000; text-decoration: none; text-align: center; font: bold 16px/24px Impact, sans-serif; border-radius: 24px;
-	}
-	a.slide-prev:hover, a.slide-next:hover { opacity: 0.7; -webkit-transition: all 0.3s ease; }
-	a.slide-next { right: 0; }
 /* start of footer css*/
 .footer-clean h3 {
   margin-top:30px;
@@ -143,12 +128,33 @@ margin-bottom: 10px;
 /* Style the header */
 .header {
     padding: 10px 16px;
-    background: #050A30;
+    background-image: url("static/img/bluebac.avif");
     color: #f1f1f1;
+    height: fit-content;
   }
   .header h2{
     font-size: 25px;
   }
+  .header .logo p {
+    float: left;
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.header .logo .simple-text {
+    text-transform: uppercase;
+    padding: 5px 0px;
+    display: block;
+    font-size: 25px;
+   margin-left: 60px;
+    color: #FFFFFF;
+    position: relative;
+    font-weight: 400;
+    line-height: 30px;
+}
+
   
   /* Page content */
   .content {
@@ -180,7 +186,7 @@ margin-bottom: 10px;
     right: 0;
     position: relative;
     float: right;
-    margin-top: -50px;
+    margin-top: -40px;
 }
 
 .search button {
@@ -212,7 +218,37 @@ margin-bottom: 10px;
     text-align: center;
 }
 /* END */
+.body_content{
+  height: auto;
+  background-image: url("static/img.bac1.jpg");
+}
+/* header link*/
+.cta-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #f00;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    position: relative;
+    margin-left: 330px;
+    margin-top: -10px;
+}
 
+.cta-link:hover {
+    background-color: #ff0000;
+}
+.indexstart{
+  margin-left: 400px;
+  background-color: #000;
+  padding: 12px 12px;
+  color: white;
+}
+.indexstart:hover{
+  background-color: black;
+  color: #42d0ed;;
+}
     </style>
 
 	<title>ECC PLATFORM</title>
@@ -251,7 +287,7 @@ margin-bottom: 10px;
 <body>
 
 <div class="wrapper">
-    <div class="sidebar" data-color="" data-image="static/img/JH.jpg">
+    <div class="sidebar" data-color="" data-image="static/img/bluebac.avif">
 
     <!--
 
@@ -261,13 +297,11 @@ margin-bottom: 10px;
     -->
 
     	<div class="sidebar-wrapper">
-            <div class="logo">
-                <img src="static/img/logoo.png" style="display: block; width: 40px;position: fixed;"> 
-                <a href="#" class="simple-text">
-                   ECC PLATFORM
-                </a>
-            </div>
-
+        <div style="text-align: center; font-size: 28px;"><a href="https://www.facebook.com">
+          <i class="icon ion-social-facebook"></i></a>
+          <a href="https://www.twitter.com"><i class="icon ion-social-twitter"></i></a>
+          <a href="https://www.linkedin.com"><i class="icon ion-social-linkedin"></i></a>
+          <a href="https://www.instagram.com"><i class="icon ion-social-instagram"></i></a></div><hr style="size: 10px ;">
             <ul class="nav">
                 <li class="active">
                     <a href="{% url 'home' %}">
@@ -288,7 +322,7 @@ margin-bottom: 10px;
                     </a>
                     <ul class="dropdown-menu1">
                         <li><a href="{% url 'login' %}">Login</a></li>
-                        <li><a href="{% url 'register' %}">Register now</a></li>
+                        <li><a href="{% url 'register' %}">Register</a></li>
                       </ul>
                 </li>
                 <li>
@@ -296,7 +330,12 @@ margin-bottom: 10px;
                         <i class="pe-7s-news-paper"></i>
                         <p>ABOUT US</p>
                     </a>
-                    
+                    <li class="active-pro">
+                      <a href="#">
+                          <i class="pe-7s-network"></i>
+                          <p style="text-align: left; font-size: 15px;">Join Today</p>
+                      </a>
+                  </li>
                 </li>
             </ul>
     	</div>
@@ -306,9 +345,15 @@ margin-bottom: 10px;
         
         <!--HEADER CONTENT-->
         <div class="header" id="myHeader">
-  <h2>Engineer and Clients Connection Platform</h2>
+          <div class="logo">
+            <img src="static/img/logoo.png" style="width: 40px;border-radius: 20px; position: fixed;"> 
+            <a href="#" class="simple-text">
+               ECC PLATFORM
+            </a>
+          </div>
 <div class="search">
             <form action="#">
+              <a href="{% url 'register' %}" class="cta-link">GET CONNECTED</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="text" placeholder="Search Engineers" name="search">
                 <button>
                     <i class="fa fa-search" style="font-size: 18px;"></i>
@@ -318,8 +363,9 @@ margin-bottom: 10px;
 
 </div>
         <div class="content">
-           <h2 style="text-align: center;font-family: 'Times New Roman', Times, serif;">Today</h2>
-            <span id="datetime" style="font-size: 25px; margin-left: 400px; "></span>
+          
+           <div style="background-color: ivory;"><h2 style="text-align: center;font-family: 'Times New Roman', Times, serif;">Today</h2>
+            <span id="datetime" style="font-size: 25px; margin-left: 400px; "></span></div><hr>
             <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -359,7 +405,7 @@ margin-bottom: 10px;
                 </button>
               </div>
               <br><br>
-              <h2><a style="text-decoration: none;margin-left: 400px;" href="{% url 'home' %}">GET STARTED</a></h2>
+              <h2><a class="indexstart" href="{% url 'home' %}">GET STARTED</a></h2>
         </div>
 
 
@@ -424,6 +470,11 @@ margin-bottom: 10px;
 
     // call the `updateDateTime` function every second
     setInterval(updateDateTime, 1000);
+  </script>
+  <script>
+    document.querySelector('.cta-link').addEventListener('click', function() {
+    alert('Start Publish your work by Joining Platform now');
+});
   </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>

@@ -143,12 +143,33 @@ margin-bottom: 10px;
 /* Style the header */
 .header {
     padding: 10px 16px;
-    background: #050A30;
+    background-image: url("static/img/bluebac.avif");
     color: #f1f1f1;
+    height: fit-content;
   }
   .header h2{
     font-size: 25px;
   }
+  .header .logo p {
+    float: left;
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.header .logo .simple-text {
+    text-transform: uppercase;
+    padding: 5px 0px;
+    display: block;
+    font-size: 25px;
+   margin-left: 60px;
+    color: #FFFFFF;
+    position: relative;
+    font-weight: 400;
+    line-height: 30px;
+}
+
   
   /* Page content */
   .content {
@@ -180,7 +201,7 @@ margin-bottom: 10px;
     right: 0;
     position: relative;
     float: right;
-    margin-top: -50px;
+    margin-top: -40px;
 }
 
 .search button {
@@ -212,6 +233,40 @@ margin-bottom: 10px;
     text-align: center;
 }
 /* END */
+/* Header Css*/
+.cta-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #f00;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    position: relative;
+    margin-left: 330px;
+    margin-top: -10px;
+}
+
+.cta-link:hover {
+    background-color: #ff0000;
+}
+/* date division */
+.displaydate{
+    background-color: ivory;
+}
+.tabledivision{
+    background-color: ivory;
+}
+@keyframes slide {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+        
+        .animated-text {
+            display: block;
+            animation: slide 2s ease infinite;
+            text-align: center;
+        }
 
     </style>
 
@@ -247,7 +302,7 @@ margin-bottom: 10px;
 <body>
 
 <div class="wrapper">
-    <div class="sidebar" data-color="" data-image="static/img/JH.jpg">
+    <div class="sidebar" data-color="" data-image="static/img/bluebac.avif">
 
     <!--
 
@@ -257,13 +312,11 @@ margin-bottom: 10px;
     -->
 
     	<div class="sidebar-wrapper">
-            <div class="logo">
-                <img src="static/img/logoo.png" style="display: block; width: 40px;position: fixed;"> 
-                <a href="#" class="simple-text">
-                   ECC PLATFORM
-                </a>
-            </div>
-
+            <div style="text-align: center; font-size: 28px;"><a href="https://www.facebook.com">
+                <i class="icon ion-social-facebook"></i></a>
+                <a href="https://www.twitter.com"><i class="icon ion-social-twitter"></i></a>
+                <a href="https://www.linkedin.com"><i class="icon ion-social-linkedin"></i></a>
+                <a href="https://www.instagram.com"><i class="icon ion-social-instagram"></i></a></div><hr style="size: 10px ;">
             <ul class="nav">
                 <li class="active">
                     <a href="{% url 'home' %}">
@@ -294,6 +347,12 @@ margin-bottom: 10px;
                         <p>ABOUT US</p>
                     </a>
                 </li>
+                <li class="active-pro">
+                    <a href="#">
+                        <i class="pe-7s-network"></i>
+                        <p style="text-align: left; font-size: 15px;">Join Today</p>
+                    </a>
+                </li>
             </ul>
     	</div>
     </div>
@@ -302,9 +361,15 @@ margin-bottom: 10px;
         
         <!--HEADER CONTENT-->
         <div class="header" id="myHeader">
-  <h2>Engineer and Clients Connection Platform</h2>
+            <div class="logo">
+                <img src="static/img/logoo.png" style="width: 40px;border-radius:20px;position: fixed;"> 
+                <a href="#" class="simple-text">
+                   ECC PLATFORM
+                </a>
+              </div>
 <div class="search">
             <form action="#">
+                <a href="{% url 'register' %}" class="cta-link">GET CONNECTED</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="text" placeholder="Search Engineers" name="search">
                 <button>
                     <i class="fa fa-search" style="font-size: 18px;"></i>
@@ -314,12 +379,16 @@ margin-bottom: 10px;
 
 </div>
         <div class="content">
+            <div class="displaydate">
             <h2 style="text-align: center;font-family: 'Times New Roman', Times, serif;">Today</h2>
             <span id="datetime" style="font-size: 25px; margin-left: 400px; "></span><br><br>
-            <img src="static/img/34.jpg" style="width: 100%; margin-top: -18px; position: relative;">
-            <h1 style="text-align: center;color: #150356; font-weight: bold;">MISSION</h1>
-            <p style="text-align: center; color: #000;font-weight: bold;">Welcome to our Platform, We help you to get Connected to a professional<br> engineer, feel free to Explore,Get ready to receive the best engineers.</p>
-            <table class="tbody">
+        </div><hr><br>
+            <div><h3 class="animated-text">Worry not, Time is Money</h3><br><img src="static/img/34.jpg" style="width: 100%; margin-top: -18px; position: relative;"></div><br>
+           <div style="background-color: ivory;"><img src="static/img/mission.jpg" style="width:250px; position:relative; border-radius: 5px;"><h1 style="text-align: center;color: #150356;font-weight: bold;margin-top:-150px;margin-left: 50px;">MISSION</h1>
+            <p style="text-align: center; color: #000;font-weight:bold;margin-left: 70px;">Welcome to our Platform, We help you to get Connected to a professional<br> engineer, feel free to Explore,Get ready to receive the best engineers.</p>
+        </div><br><hr>
+        <div class="tabledivision">
+        <table class="tbody">
                     <h1 style="text-align:center;font-size:30px;color: #150356; font-weight:bold;">DIFFERENT CATEGORY OF ENGINEER</h1>
                 <tr>
                     <td><img src="static/img/45.webp"></td>
@@ -349,7 +418,7 @@ margin-bottom: 10px;
                         The goal is to engineer high-performance buildings that are sustainable, resilient, economically viable, 
                         that ensure the safety,health,comfort,and productivity of occupants.</p><a href="">FIND MORE</a></td>
                 </tr>
-            </table>
+            </table></div>
             
         </div>
 
@@ -400,6 +469,11 @@ margin-bottom: 10px;
 </div>
 
 </body>
+<script>
+    document.querySelector('.cta-link').addEventListener('click', function() {
+    alert('Start Publish your work by Joining Platform now');
+});
+  </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 

@@ -18,6 +18,9 @@ def account(request):
 def about(request):
     return render(request,"about.html")
 
+def engineer(request):
+    return render(request,"engineer.html")
+
 
 def register(request):
     return render(request,"registration.html")
